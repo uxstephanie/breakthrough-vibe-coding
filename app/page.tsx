@@ -282,7 +282,7 @@ export default function HomePage() {
                   <span className="text-gray-400">/ 8 hours (4 days)</span>
                 </div>
                 <p className="text-sm text-gray-500 mt-2">
-                  Already took Quick Start? Upgrade for just $18 more.
+                  Already took Quick Start? Upgrade for just $28 more.
                 </p>
               </div>
               <ul className="space-y-3 mb-8 flex-1">
@@ -306,7 +306,7 @@ export default function HomePage() {
               <p className="text-center text-xs text-gray-400 mt-3">
                 Quick Start grad?{" "}
                 <a href="/intensive#upgrade" className="text-orange-500 font-semibold hover:underline">
-                  Upgrade for $18
+                  Upgrade for $28
                 </a>
               </p>
             </div>
