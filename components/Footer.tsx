@@ -44,7 +44,7 @@ export default function Footer() {
                   href="/intensive#upgrade"
                   className="hover:text-brand-400 transition-colors"
                 >
-                  Upgrade — $18
+                  Upgrade — $28
                 </Link>
               </li>
             </ul>
