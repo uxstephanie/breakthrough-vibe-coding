@@ -360,10 +360,12 @@ export default function HomePage() {
             Who&apos;s Teaching This?
           </h2>
           <div className="bg-white rounded-xl border border-gray-100 p-10 shadow-sm">
-            <div className="w-20 h-20 rounded-full bg-brand-100 mx-auto mb-6 flex items-center justify-center">
-              <svg className="w-10 h-10 text-brand-400" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
-              </svg>
+            <div className="w-24 h-24 rounded-full mx-auto mb-6 overflow-hidden">
+              <img
+                src="/stephanie_warren_headshot.png"
+                alt="Stephanie Warren"
+                className="w-full h-full object-cover"
+              />
             </div>
             <h3 className="text-xl font-bold text-navy-900 mb-1">
               Stephanie Warren
