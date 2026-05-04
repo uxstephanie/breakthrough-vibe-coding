@@ -111,13 +111,20 @@ export default async function ThankYouPage({ searchParams }: Props) {
             Before Your Session
           </h2>
           <ol className="space-y-3">
-            {[
-              "Install VS Code — code.visualstudio.com",
-              "Install Claude Code — follow the link in your confirmation email",
-              "Create a free GitHub account at github.com",
-              "Create a free Supabase account at supabase.com",
-              "Show up ready to build — no coding experience needed",
-            ].map((step, i) => (
+            {(product === "intensive"
+              ? [
+                  "Install VS Code — code.visualstudio.com",
+                  "Install Claude Code — follow the link in your confirmation email",
+                  "Create a free GitHub account at github.com",
+                  "Create a free Supabase account at supabase.com",
+                  "Show up ready to build — no coding experience needed",
+                ]
+              : [
+                  "Create a free Lovable account at lovable.dev",
+                  "Create a free GitHub account at github.com",
+                  "Show up ready to build — no coding experience needed",
+                ]
+            ).map((step, i) => (
               <li key={i} className="flex items-start gap-3 text-sm text-gray-700">
                 <span className="w-5 h-5 rounded-full bg-brand-500 text-white flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">
                   {i + 1}
