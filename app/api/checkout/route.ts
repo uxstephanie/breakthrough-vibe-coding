@@ -1,8 +1,6 @@
 import Stripe from "stripe";
 import { NextResponse } from "next/server";
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
-
 const PRICE_IDS: Record<string, string> = {
   "quick-start": "price_1TSP7rDhFxjBG1AwneN2pnMB",
   intensive:     "price_1TSPA2DhFxjBG1AwjOFh1JQu",
@@ -10,6 +8,7 @@ const PRICE_IDS: Record<string, string> = {
 };
 
 export async function POST(req: Request) {
+  const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
   const { product, sessionDate, sessionDisplay, sessionTime } = await req.json();
 
   const priceId = PRICE_IDS[product];
