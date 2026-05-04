@@ -37,10 +37,10 @@ export default function NavBar() {
             >
               Intensive
             </Link>
-            <CTAButton href="/quick-start" size="sm" variant="outline">
+            <CTAButton href="/intensive#enroll" size="sm" variant="outline">
               Intensive — $67
             </CTAButton>
-            <CTAButton href="/quick-start" size="sm">
+            <CTAButton href="/quick-start#enroll" size="sm">
               Quick Start — $39.99
             </CTAButton>
           </div>
@@ -102,7 +102,7 @@ export default function NavBar() {
               Intensive
             </Link>
             <CTAButton
-              href="/intensive"
+              href="/intensive#enroll"
               size="sm"
               variant="outline"
               className="w-full justify-center"
@@ -111,7 +111,7 @@ export default function NavBar() {
               Intensive — $67
             </CTAButton>
             <CTAButton
-              href="/quick-start"
+              href="/quick-start#enroll"
               size="sm"
               className="w-full justify-center"
               onClick={() => setOpen(false)}

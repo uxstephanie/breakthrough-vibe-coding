@@ -2,11 +2,13 @@ import type { Metadata } from "next";
 import CTAButton from "@/components/CTAButton";
 import FAQAccordion, { FAQItem } from "@/components/FAQAccordion";
 import TestimonialCard from "@/components/TestimonialCard";
+import SessionPicker from "@/components/SessionPicker";
+import { intensiveSessions } from "@/lib/sessions";
 
 export const metadata: Metadata = {
   title: "Intensive — Master AI-Directed Building in 8 Hours | Breakthrough Vibe Coding",
   description:
-    "Master Claude Code, build autonomous agents, and deploy production apps. $67 — or upgrade from Quick Start for just $18 more.",
+    "Master Claude Code, build autonomous agents, and deploy production apps. $67 — or upgrade from Quick Start for just $28 more.",
 };
 
 const outcomes = [
@@ -93,30 +95,30 @@ const curriculum = [
 
 const projects = [
   {
-    title: "Lead Magnet Quiz",
+    title: "App 01: Lead Magnet (30 min)",
     bullets: [
-      "Ask users questions",
-      "Segment by answer",
-      "Email results automatically",
-      "A real business tool from day one",
+      "Beautiful landing page with your offer",
+      "Email capture saved to Supabase database",
+      "Thank-you page on submission",
+      "Customized for YOUR business in minutes",
     ],
   },
   {
-    title: "Autonomous ROI Calculator",
+    title: "App 02: Lead Scoring Tool (80 min)",
     bullets: [
-      "Collect business metrics",
-      "Use Claude to calculate ROI",
-      "Generate personalized advice",
-      "Loops and continuously improves answers",
+      "4 custom scoring factors with your own weights",
+      "Real-time Hot / Warm / Cold score (0–100)",
+      "3 autonomous agents run automatically on submit",
+      "Saves leads to Supabase + sends email alerts",
     ],
   },
   {
-    title: "Your Custom Project",
+    title: "Both Deployed Live",
     bullets: [
-      "We'll help you build YOUR idea",
-      "Real-world application",
-      "Deployed to production",
-      "You own and operate it after",
+      "Push to GitHub, import to Vercel",
+      "Two live URLs you can share immediately",
+      "Data flowing into Supabase in real time",
+      "You own and operate both apps after class",
     ],
   },
 ];
@@ -221,14 +223,14 @@ export default function IntensivePage() {
           <p className="text-lg text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed">
             Learn Claude Code, build autonomous agents, and deploy
             production-ready apps. Already took Quick Start? Upgrade for just
-            $18 more.
+            $28 more.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <CTAButton href="#enroll" size="lg">
-              Enroll in Intensive — $67
+              Enroll Now — $67
             </CTAButton>
             <CTAButton href="#upgrade" size="lg" variant="outline">
-              Upgrade from Quick Start — $18
+              Upgrade from Quick Start — $28
             </CTAButton>
           </div>
         </div>
@@ -522,36 +524,43 @@ export default function IntensivePage() {
 
       {/* ── Upgrade Box ──────────────────────────────────────── */}
       <section id="upgrade" className="py-20 px-4 bg-orange-50 border-t border-orange-100">
-        <div className="max-w-2xl mx-auto text-center">
+        <div className="max-w-xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-navy-900 mb-4">
-            Completed Quick Start? Upgrade Now
+            Completed Quick Start? You Get a Discount
           </h2>
           <p className="text-gray-600 mb-8 leading-relaxed">
-            Your Quick Start prepared you perfectly. Most graduates go straight
-            to Intensive and it clicks instantly.
+            Quick Start graduates pay just $28 to join the Intensive — that&apos;s
+            $39 off the regular price. Your upgrade code was included in your
+            Quick Start confirmation email.
           </p>
-          <div className="bg-white rounded-xl border border-orange-200 p-8 shadow-sm mb-8">
-            <p className="text-gray-500 text-sm mb-1">
-              You&apos;ve already paid{" "}
-              <span className="text-navy-900 font-semibold">$39.99</span>
-            </p>
-            <p className="text-gray-500 text-sm mb-4">
-              Intensive is normally{" "}
-              <span className="text-navy-900 font-semibold">$67</span>
-            </p>
-            <p className="text-2xl font-bold text-orange-500">
-              Your upgrade: Just $18 more
+          <div className="bg-white rounded-xl border border-orange-200 p-8 shadow-sm">
+            <ol className="text-left space-y-4">
+              {[
+                "Find your upgrade code in your Quick Start confirmation email",
+                "Pick a cohort week below and click Enroll Now",
+                "Enter your code at Stripe checkout — price drops to $28",
+              ].map((step, i) => (
+                <li key={i} className="flex items-start gap-3 text-sm text-gray-700">
+                  <span className="w-6 h-6 rounded-full bg-orange-500 text-white flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">
+                    {i + 1}
+                  </span>
+                  {step}
+                </li>
+              ))}
+            </ol>
+            <p className="mt-6 text-sm text-gray-400">
+              Can&apos;t find your code?{" "}
+              <a href="mailto:support@breakthrough-vibe-coding.com" className="text-orange-500 font-semibold hover:underline">
+                Email us
+              </a>
             </p>
           </div>
-          <CTAButton href="#" size="lg" variant="secondary">
-            Upgrade for $18
-          </CTAButton>
         </div>
       </section>
 
       {/* ── Final CTA ────────────────────────────────────────── */}
-      <section id="enroll" className="py-24 px-4 bg-navy-900 text-white text-center">
-        <div className="max-w-3xl mx-auto">
+      <section id="enroll" className="py-24 px-4 bg-navy-900 text-white">
+        <div className="max-w-xl mx-auto text-center">
           <p className="text-orange-400 font-semibold text-sm uppercase tracking-widest mb-4">
             Founding Cohort Pricing
           </p>
@@ -562,17 +571,9 @@ export default function IntensivePage() {
             Founding cohort pricing. Next tier will be $197.
           </p>
           <p className="text-gray-400 mb-10">
-            8 hours &nbsp;·&nbsp; $67 &nbsp;·&nbsp; 4 days or 1 intensive day
-            &nbsp;·&nbsp; Multiple apps deployed
+            8 hours &nbsp;·&nbsp; $67 &nbsp;·&nbsp; Mon–Thu, 4pm–6pm EST &nbsp;·&nbsp; Multiple apps deployed
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <CTAButton href="#" size="lg">
-              Enroll in Intensive — $67
-            </CTAButton>
-            <CTAButton href="/quick-start" size="lg" variant="outline">
-              Compare Quick Start vs Intensive
-            </CTAButton>
-          </div>
+          <SessionPicker sessions={intensiveSessions} product="intensive" buttonLabel="Enroll Now — $67" />
           <p className="mt-6 text-gray-500 text-sm">
             Questions?{" "}
             <a

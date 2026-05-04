@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import CTAButton from "@/components/CTAButton";
 import FAQAccordion, { FAQItem } from "@/components/FAQAccordion";
 import TestimonialCard from "@/components/TestimonialCard";
+import SessionPicker from "@/components/SessionPicker";
+import { quickStartSessions } from "@/lib/sessions";
 
 export const metadata: Metadata = {
   title: "Quick Start — Build Your First App in 2 Hours | Breakthrough Vibe Coding",
@@ -457,8 +459,8 @@ export default function QuickStartPage() {
       </section>
 
       {/* ── Enrollment CTA ───────────────────────────────────── */}
-      <section id="enroll" className="py-24 px-4 bg-navy-900 text-white text-center">
-        <div className="max-w-3xl mx-auto">
+      <section id="enroll" className="py-24 px-4 bg-navy-900 text-white">
+        <div className="max-w-xl mx-auto text-center">
           <p className="text-orange-400 font-semibold text-sm uppercase tracking-widest mb-4">
             Founding Cohort Pricing
           </p>
@@ -468,11 +470,8 @@ export default function QuickStartPage() {
           </p>
           <p className="text-gray-400 mb-10">
             2 hours &nbsp;·&nbsp; $39.99 &nbsp;·&nbsp; No coding required
-            &nbsp;·&nbsp; Live or recording
           </p>
-          <CTAButton href="#" size="lg">
-            Reserve Your Spot — $39.99
-          </CTAButton>
+          <SessionPicker sessions={quickStartSessions} product="quick-start" buttonLabel="Enroll Now — $39.99" />
           <p className="mt-6 text-gray-500 text-sm">
             Questions?{" "}
             <a
