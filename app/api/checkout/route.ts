@@ -18,14 +18,19 @@ export async function POST(req: Request) {
 
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL ?? "http://localhost:3000";
 
-  const session = await stripe.checkout.sessions.create({
-    payment_method_types: ["card"],
-    line_items: [{ price: priceId, quantity: 1 }],
-    mode: "payment",
-    success_url: `${baseUrl}/thank-you?product=${encodeURIComponent(product)}&session=${encodeURIComponent(sessionDisplay)}&time=${encodeURIComponent(sessionTime)}`,
-    cancel_url: `${baseUrl}/${product === "quick-start" ? "quick-start" : "intensive"}`,
-    metadata: { product, sessionDate, sessionDisplay, sessionTime },
-  });
-
-  return NextResponse.json({ url: session.url });
+  try {
+    const session = await stripe.checkout.sessions.create({
+      payment_method_types: ["card"],
+      line_items: [{ price: priceId, quantity: 1 }],
+      mode: "payment",
+      success_url: `${baseUrl}/thank-you?product=${encodeURIComponent(product)}&session=${encodeURIComponent(sessionDisplay)}&time=${encodeURIComponent(sessionTime)}`,
+      cancel_url: `${baseUrl}/${product === "quick-start" ? "quick-start" : "intensive"}`,
+      metadata: { product, sessionDate, sessionDisplay, sessionTime },
+    });
+    return NextResponse.json({ url: session.url });
+  } catch (err: unknown) {
+    const message = err instanceof Error ? err.message : String(err);
+    console.error("Stripe error:", message);
+    return NextResponse.json({ error: message }, { status: 500 });
+  }
 }
