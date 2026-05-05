@@ -133,7 +133,7 @@ const forYouIf = [
 ];
 
 const deliverables = [
-  "3+ deployed, production-ready applications",
+  "2 deployed, production-ready applications",
   "Full recordings of all 8 hours",
   "Comprehensive Documentation (50+ pages)",
   "10 SOPs for building with Claude",
@@ -148,7 +148,7 @@ const comparisonRows: [string, string, string][] = [
   ["Duration", "2 hours", "8 hours (4 days)"],
   ["Price", "$39.99", "$67"],
   ["Focus", "Lovable & UI", "Claude Code & Agents"],
-  ["Apps Built", "1 (Mood Tracker)", "3+"],
+  ["Apps Built", "1 (Mood Tracker)", "2"],
   ["Database", "Browser storage", "Supabase"],
   ["Deployment", "Vercel (basic)", "Vercel + advanced"],
   ["Agents", "Understand concept", "Build autonomous agents"],
