@@ -82,13 +82,13 @@ const curriculum = [
   },
   {
     day: "Day 4",
-    title: "Production Deployment & Capstone",
+    title: "Production Deployment & Security",
     items: [
       "Deploying with Vercel (advanced)",
-      "Environment variables and secrets",
-      "Monitoring and debugging",
-      "Capstone project: Build 2 production-ready apps",
-      "Final showcase",
+      "Environment variables and secret management",
+      "API key protection and .env best practices",
+      "Supabase Row Level Security (RLS)",
+      "Monitoring, debugging, and error handling",
     ],
   },
 ];

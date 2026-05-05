@@ -199,16 +199,17 @@ export default function HomePage() {
               </div>
               <ol className="space-y-4">
                 {[
-                  ["Day 1 – 2", "Claude Code Deep Dive"],
-                  ["Day 3 – 4", "Build Autonomous Agents"],
-                  ["Day 4", "Deploy to Production"],
+                  ["Day 1", "Planning with Claude"],
+                  ["Day 2", "Claude Code Deep Dive"],
+                  ["Day 3", "Build Two B2B Apps"],
+                  ["Day 4", "Production & Security"],
                 ].map(([time, label], i) => (
                   <li key={i} className="flex items-start gap-4">
                     <div className="flex flex-col items-center shrink-0">
                       <div className="w-7 h-7 rounded-full bg-orange-500 text-white flex items-center justify-center text-xs font-bold">
                         {i + 1}
                       </div>
-                      {i < 2 && (
+                      {i < 3 && (
                         <div className="w-px h-6 bg-orange-200 mt-1" />
                       )}
                     </div>
