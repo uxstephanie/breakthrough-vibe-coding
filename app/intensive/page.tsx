@@ -6,7 +6,7 @@ import SessionPicker from "@/components/SessionPicker";
 import { intensiveSessions } from "@/lib/sessions";
 
 export const metadata: Metadata = {
-  title: "Intensive — Master AI-Directed Building in 8 Hours | Breakthrough Vibe Coding",
+  title: "Intensive — Master Claude Code in 8 Hours | Breakthrough Vibe Coding",
   description:
     "Master Claude Code, build autonomous agents, and deploy production apps. $67 — or upgrade from Quick Start for just $28 more.",
 };
@@ -215,7 +215,7 @@ export default function IntensivePage() {
             8-Hour Intensive Workshop
           </p>
           <h1 className="text-5xl sm:text-6xl font-bold leading-tight mb-6">
-            Master AI-Directed Building in 8 Hours
+            Master Claude Code in 8 Hours
           </h1>
           <p className="text-xl text-gray-400 font-medium mb-4">
             $67 &nbsp;·&nbsp; 4 Days × 2 Hours (or One Full Day) &nbsp;·&nbsp; Go Deep
