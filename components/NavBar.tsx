@@ -12,15 +12,8 @@ export default function NavBar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-1 shrink-0">
-            <img src="/bolt.png" alt="" className="w-9 h-9 mr-[-5px]" />
-            <span className="font-bold text-white">
-              Breakthrough
-              <span className="text-gold-400">Vibe</span>
-              <span className="text-white/50 font-medium ml-1 text-xs tracking-widest uppercase">
-                Coding
-              </span>
-            </span>
+          <Link href="/" className="flex items-center shrink-0">
+            <img src="/bvc-logo.png" alt="Breakthrough Vibe Coding" className="h-8 w-auto" />
           </Link>
 
           {/* Desktop nav */}
