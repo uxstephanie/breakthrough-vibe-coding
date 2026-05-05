@@ -147,7 +147,7 @@ const deliverables = [
 const comparisonRows: [string, string, string][] = [
   ["Duration", "2 hours", "8 hours (4 days)"],
   ["Price", "$39.99", "$67"],
-  ["Focus", "Lovable & UI", "Claude Code & Agents"],
+  ["Focus", "Claude & Lovable", "Claude Code & Agents"],
   ["Apps Built", "1 (Mood Tracker)", "2"],
   ["Database", "Browser storage", "Supabase"],
   ["Deployment", "Vercel (basic)", "Vercel + advanced"],

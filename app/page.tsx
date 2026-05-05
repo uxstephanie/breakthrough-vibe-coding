@@ -110,7 +110,7 @@ export default function HomePage() {
 
           {/* Social proof bar */}
           <p className="mt-8 text-sm text-gray-400">
-            Join 300+ builders who shipped their first app
+            Join our community of builders who shipped their first app in two hours!
           </p>
         </div>
       </section>
