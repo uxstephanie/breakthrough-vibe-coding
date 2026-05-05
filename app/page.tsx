@@ -161,11 +161,11 @@ export default function HomePage() {
               </div>
               <ol className="space-y-4">
                 {[
-                  ["0:00 – 0:15", "Setup & Learn"],
-                  ["0:15 – 0:50", "Build Your App"],
-                  ["0:50 – 1:30", "Refine & Iterate"],
-                  ["1:30 – 1:55", "Deploy to Internet"],
-                  ["1:55 – 2:00", "You have a live URL"],
+                  ["0:00 – 0:15", "What Is a PRD?"],
+                  ["0:15 – 0:35", "Write Your PRD with Claude"],
+                  ["0:35 – 1:50", "Build in Lovable"],
+                  ["1:50 – 1:58", "Deploy to Internet"],
+                  ["1:58 – 2:00", "Celebrate & What's Next"],
                 ].map(([time, label], i) => (
                   <li key={i} className="flex items-start gap-4">
                     <div className="flex flex-col items-center shrink-0">
