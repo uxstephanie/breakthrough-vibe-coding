@@ -120,8 +120,10 @@ export default async function ThankYouPage({ searchParams }: Props) {
                   "Show up ready to build — no coding experience needed",
                 ]
               : [
+                  "Install VS Code — code.visualstudio.com",
+                  "Install Claude Code — VS Code → Extensions → search \"Claude Code\"",
+                  "Create a free Claude account and get your API key at claude.ai",
                   "Create a free Lovable account at lovable.dev",
-                  "Create a free GitHub account at github.com",
                   "Show up ready to build — no coding experience needed",
                 ]
             ).map((step, i) => (

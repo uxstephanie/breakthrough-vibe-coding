@@ -39,13 +39,11 @@ const outcomes = [
 ];
 
 const schedule = [
-  ["0:00 – 0:05", "Welcome & Demo", "See what we're building"],
-  ["0:05 – 0:15", "Setup Lovable", "Sign up, project setup"],
-  ["0:15 – 0:30", "Learn Capabilities", "What Lovable can and can't do"],
-  ["0:30 – 0:50", "Prompting Formula", "How to talk to AI effectively"],
-  ["0:50 – 1:30", "Build Mood Tracker", "Live building — you follow along"],
-  ["1:30 – 1:55", "Deploy to Internet", "Get your live URL"],
-  ["1:55 – 2:00", "What's Next", "Ideas for your next app"],
+  ["0:00 – 0:15", "What Is a PRD?", "Learn the blueprint before you build"],
+  ["0:15 – 0:35", "Write Your PRD with Claude", "Paste a prompt, get a complete PRD"],
+  ["0:35 – 1:50", "Build in Lovable", "Live building from your PRD"],
+  ["1:50 – 1:58", "Deploy to Internet", "Get your live URL on Vercel"],
+  ["1:58 – 2:00", "Celebrate & What's Next", "Ideas for your next app"],
 ];
 
 const deliverables = [
