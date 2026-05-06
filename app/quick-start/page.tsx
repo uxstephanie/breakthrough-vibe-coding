@@ -200,67 +200,6 @@ export default function QuickStartPage() {
         </div>
       </section>
 
-      {/* ── The Mood Tracker ─────────────────────────────────── */}
-      <section className="py-20 px-4 bg-gray-50">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-navy-900 mb-4">
-            Here&apos;s What You&apos;ll Build
-          </h2>
-          <p className="text-gray-500 mb-12 max-w-xl mx-auto">
-            A real, functioning mood tracker that uses AI to provide
-            personalized insights. It saves data, shows history, and deploys
-            live.
-          </p>
-          {/* App mockup */}
-          <div className="bg-white rounded-2xl border border-gray-200 shadow-md overflow-hidden max-w-sm mx-auto text-left">
-            <div className="bg-brand-500 px-5 py-4">
-              <p className="text-white font-bold text-lg">Mood Tracker</p>
-              <p className="text-brand-100 text-xs mt-0.5">AI-powered insights</p>
-            </div>
-            <div className="p-5 space-y-4">
-              <div>
-                <label className="text-xs font-semibold text-gray-500 uppercase tracking-wider">
-                  How are you feeling?
-                </label>
-                <div className="mt-2 rounded-lg border border-gray-200 px-4 py-3 text-gray-400 text-sm bg-gray-50">
-                  Tell me how you&apos;re feeling today...
-                </div>
-              </div>
-              <div className="rounded-lg bg-brand-50 border border-brand-100 px-4 py-3">
-                <p className="text-xs font-semibold text-brand-600 mb-1">
-                  AI Insight
-                </p>
-                <p className="text-sm text-gray-600">
-                  It sounds like you&apos;re in a reflective mood. That&apos;s a
-                  great space for creativity...
-                </p>
-              </div>
-              <div>
-                <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">
-                  Mood History
-                </p>
-                {[
-                  ["Today, 9:41am", "Focused 😊"],
-                  ["Yesterday, 8:02pm", "Relaxed 😌"],
-                  ["Mon, 7:15pm", "Energized ⚡"],
-                ].map(([time, mood]) => (
-                  <div
-                    key={time}
-                    className="flex items-center justify-between py-2 border-t border-gray-100 text-sm"
-                  >
-                    <span className="text-gray-400 text-xs">{time}</span>
-                    <span className="text-gray-700">{mood}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-          <p className="mt-8 text-sm text-gray-400">
-            Real app. Real URL. Live on the internet before the session ends.
-          </p>
-        </div>
-      </section>
-
       {/* ── Schedule ─────────────────────────────────────────── */}
       <section className="py-20 px-4 bg-white">
         <div className="max-w-3xl mx-auto">

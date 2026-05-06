@@ -65,7 +65,6 @@ const quickStartFeatures = [
   "Build your first app",
   "Live deployment",
   "Shareable URL",
-  "Mood Tracker project",
   "Lifetime recordings",
   "Student companion guide",
 ];
