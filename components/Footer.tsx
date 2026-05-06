@@ -7,12 +7,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Brand */}
           <div>
-            <div className="flex items-center gap-2 mb-3">
-              <span className="text-xl">⚡</span>
-              <span className="font-bold text-white">
-                Breakthrough
-                <span className="text-brand-400">Vibe</span> Coding
-              </span>
+            <div className="mb-3">
+              <img src="/bvc-logo.png" alt="Breakthrough Vibe Coding" className="h-8 w-auto" />
             </div>
             <p className="text-sm leading-relaxed">
               From stuck to shipped in 2 hours. Master it in 8.
