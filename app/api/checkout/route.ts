@@ -35,6 +35,7 @@ export async function POST(req: Request) {
         },
       ],
       mode: "payment",
+      allow_promotion_codes: true,
       success_url: `${baseUrl}/thank-you?product=${encodeURIComponent(product)}&session=${encodeURIComponent(sessionDisplay)}&time=${encodeURIComponent(sessionTime)}`,
       cancel_url: `${baseUrl}/${product === "quick-start" ? "quick-start" : "intensive"}`,
       metadata: { product, sessionDate, sessionDisplay, sessionTime },
